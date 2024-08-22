@@ -1,0 +1,45 @@
+<%- include("partials/header.ejs") %>
+<h1>Bounder-free Commerce</h1>
+    <p>Compra rápido, fácil y barato todos los productos que quieras en Estados Unidos</p>
+    
+    <form action="/submit" method="POST">
+        <div id="country">
+            <label for="flag">Enviar a:</label>
+            <br>
+            <button type="button" >
+                <img src="images/colombia.png" alt="" class="country colombia" />
+            </button>
+            <button type="button" >
+                <img src="images/argentina.png" alt="" class="country argentina" />
+            </button>
+            <button type="button" >
+                <img src="images/chile.png" alt="" class="country chile" />
+            </button>
+            <button type="button" >
+                <img src="images/ecuador.png" alt="" class="country ecuador" />
+            </button>
+            <button type="button" >
+                <img src="images/mexico.png" alt="" class="country mexico" />
+            </button>
+            
+        </div>
+        <br>
+        <label for="productUrl">Quiero comprar:</label>
+        <input type="text" name="productUrl" placeholder="Pega el aquí link del producto que queires comprar" size="100" required>
+        <input type="submit" value="Agregar producto" onclick="agregarCampo(); return false;"> 
+        <br>
+        <br>
+        <input type="submit" value="Cotizar">
+    </form>
+
+
+    <h2>Gestionado por Gabolandi, tu shopper de confianza</h2>
+    <div>
+        <a href="https://www.instagram.com/gabolandi/">
+            <img src="images/instagram.jpeg" style="height:42px;">
+        </a>
+        <a href="https://www.instagram.com/gabolandi/">
+            <img src="images/gabolandi.png" style="height: 42px;">
+        </a>
+    </div>
+<%- include("partials/footer.ejs") %>
