@@ -1,0 +1,34 @@
+
+<%- include("partials/header.ejs") %>
+<div>
+  <h1>Un comercio abierto a todo el mundo</h1>
+</div>
+
+
+<div class="intro">
+
+  <h2>Bienvenid@ a este espacio</h2>
+  <p class="texts">
+      Aquí encontraras información de productos disponibles a nivel global, recomendaciones para comprar, donde encontrar lo que buscas, como aprovechar promociones y muchísimos beneficios que puedes llevar de cualquier parte del mundo hasta la puerta de tu casa!
+  </p>
+</div>
+<div class="open-blog">
+  <% if (locals.entry) { %>
+    <h4>Autor: <%= entry['author'] %> </h4>
+    <p class="texts"><%= entry['newPost'] %></p>
+  <% } %>
+</div>
+<div class="all-entries">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis sequi quas reprehenderit dolorem cumque eius cum dolores! Impedit, fugit. Architecto facere fugiat commodi porro. Quis sit voluptatum sunt provident nihil?</p>
+</div>
+<div class="new-post">
+  <form action="/blogpost" method="POST">
+    <input type="text" name="author" placeholder="Escribe tu nombre aquí" size="30">
+    <input type="text" name="newPost" value="hola como t va" size="100">
+    <input type="submit" value="Agregar al blog">
+  </form>
+</div>
+
+
+<%- include("partials/footer.ejs") %>
+

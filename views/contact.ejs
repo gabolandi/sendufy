@@ -1,11 +1,24 @@
 
 <%- include("partials/header.ejs") %>
-<h1>Contact Me</h1>
-<form>
-  <input name="name" type="text" class="feedback-input" placeholder="Name" />
-  <input name="email" type="text" class="feedback-input" placeholder="Email" />
-  <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-  <input type="submit" value="SUBMIT" />
+<h1>Deja tu comentario</h1>
+
+<form class="contact-form">
+  <div class="field">
+      <label class="campo__label" for="nombre">Nombre</label>
+      <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre">
+  </div>
+  <div class="field">
+      <label class="campo__label" for="email">E-mail</label>
+      <input class="campo__field"type="email" placeholder="Tu E-mail" id="email">
+  </div>
+  <div class="field">
+      <label class="campo__label" for="mensaje">Mensaje</label>
+      <textarea class="campo__field campo__field--textarea"id="mensaje"></textarea>
+  </div>
+
+  <div class="field">
+      <input type="submit" value="Enviar" class="boton boton--primario">
+  </div>
 </form>
 
 <%- include("partials/footer.ejs") %>
