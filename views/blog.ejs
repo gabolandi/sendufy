@@ -1,33 +1,44 @@
 
 <%- include("partials/header.ejs") %>
-<div>
+<div class="box1">
   <h1>Un comercio abierto a todo el mundo</h1>
 </div>
 
 
-<div class="intro">
+<div class="box2 header-blog">
 
   <h2>Bienvenid@ a este espacio</h2>
   <p class="texts">
       Aquí encontraras información de productos disponibles a nivel global, recomendaciones para comprar, donde encontrar lo que buscas, como aprovechar promociones y muchísimos beneficios que puedes llevar de cualquier parte del mundo hasta la puerta de tu casa!
   </p>
 </div>
-<div class="open-blog">
-  <% if (locals.entry) { %>
-    <h4>Autor: <%= entry['author'] %> </h4>
-    <p class="texts"><%= entry['newPost'] %></p>
-  <% } %>
-</div>
-<div class="all-entries">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis sequi quas reprehenderit dolorem cumque eius cum dolores! Impedit, fugit. Architecto facere fugiat commodi porro. Quis sit voluptatum sunt provident nihil?</p>
-</div>
-<div class="new-post">
-  <form action="/blogpost" method="POST">
-    <input type="text" name="author" placeholder="Escribe tu nombre aquí" size="30">
-    <input type="text" name="newPost" value="hola como t va" size="100">
-    <input type="submit" value="Agregar al blog">
-  </form>
-</div>
+
+
+  <div class="box3 "> 
+    <div class="blog-right">
+      <% if (locals.entry) { %>
+        <h4>Autor: <%= entry['author'] %> </h4>
+        <p class="texts"><%= entry['newPost'] %></p>
+      <% } %>
+    </div>
+    <div class=" blog-left">
+      <ul class="blog-list">
+        <li><a href="#">Blog entry 1</a></li>
+        <li><a href="#">Blog entry 2</a></li>
+        <li><a href="#">Blog entry 3</a></li>
+        <li><a href="#">Blog entry 4</a></li>
+        <li><a href="#">Blog entry 5</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="box4 footer-blog">
+    <form action="/blogpost" method="POST">
+      <input type="text" name="author" placeholder="Escribe tu nombre aquí" size="20">
+      <input type="text" name="newPost" placeholder="escribe tu nueva entrada aquí" size="70">
+      <input type="submit" class="submit-entry" value="Agregar al blog">
+    </form>
+  </div>
+
 
 
 <%- include("partials/footer.ejs") %>

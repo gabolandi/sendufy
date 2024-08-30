@@ -18,15 +18,14 @@ main{
 
 
 /*----------bootstrap-navbar-css------------*/
-.navbar-logo {
-  padding: 1rem;
-  color: white ;
-}
-.navbar-mainbg {
+nav {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
   background-color: coral;
-  padding: 0px;
+  color: white;
+  padding: 2.5rem 1.5rem;
 }
-
 
 
 .country{
@@ -39,6 +38,7 @@ footer {
     width: 100%;
     background: coral;
     color: white;
+    padding: 2.5rem 1.5rem;
   }
 
   /** Contacto **/
