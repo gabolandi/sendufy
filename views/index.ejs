@@ -2,44 +2,68 @@
 <h1>Bounder-free Commerce</h1>
     <p>Compra rápido, fácil y al mejor precio todos los productos que quieras en Estados Unidos</p>
     
-    <form action="/submit" method="POST">
-        <div id="country">
-            <label for="flag">Enviar a:</label>
-            <br>
-            <button type="button" >
-                <img src="images/colombia.png" alt="" class="country colombia" />
+    <div class="country-selection">
+        <h2>Enviar a:</h2>
+        <div class="flags">
+            <button class="flag" data-country="Colombia">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" alt="Colombia">
             </button>
-            <button type="button" >
-                <img src="images/argentina.png" alt="" class="country argentina" />
+            <button class="flag" data-country="Argentina">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" alt="Argentina">
             </button>
-            <button type="button" >
-                <img src="images/chile.png" alt="" class="country chile" />
+            <button class="flag" data-country="Chile">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="Chile">
             </button>
-            <button type="button" >
-                <img src="images/ecuador.png" alt="" class="country ecuador" />
+            <button class="flag" data-country="Ecuador">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg" alt="Ecuador">
             </button>
-            <button type="button" >
-                <img src="images/mexico.png" alt="" class="country mexico" />
+            <button class="flag" data-country="México">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="México">
             </button>
-            
         </div>
-        <br>
-        <label for="productUrl">Quiero comprar:</label>
-        <input type="text" name="productUrl" placeholder="Pega el aquí link del producto que queires comprar" size="100" required>
-        <input type="submit" value="Agregar producto" onclick="agregarCampo(); return false;"> 
-        <br>
-        <br>
-        <input type="submit" value="Cotizar">
-    </form>
-
-
-    <h2>Gestionado por Gabolandi, tu shopper de confianza</h2>
-    <div>
-        <a href="https://www.instagram.com/gabolandi/">
-            <img src="images/instagram.jpeg" style="height:42px;">
-        </a>
-        <a href="https://www.instagram.com/gabolandi/">
-            <img src="images/gabolandi.png" style="height: 42px;">
-        </a>
+        <p id="selectedCountry">No se ha seleccionado ningún país</p>
     </div>
+    
+    <section class="brand-section">
+        <div class="brand-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Nike_logo.svg" alt="Nike Logo">
+            <a href="https://www.nike.com/" target="_blank"><h2>Nike</h2></a>
+        </div>
+        <div class="brand-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Adidas_Logo.svg" alt="Adidas Logo">
+            
+            <a href="https://www.adidas.com/us" target="_blank"><h2>Adidas</h2></a>
+        </div>
+        <div class="brand-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Puma_Logo.svg" alt="Puma Logo">               
+            <a href="https://us.puma.com/" target="_blank"><h2>Puma</h2></a>
+        </div>
+        <div class="brand-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Under_Armour_Logo.svg" alt="Under Armour Logo">
+            <a href="https://www.underarmour.com/en-us/" target="_blank"><h2>Under Armour</h2></a>
+        </div>
+        <div class="brand-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Reebok_Logo.svg" alt="Reebok Logo">
+            
+            <a href="https://www.reebok.com/us/" target="_blank"><h2>Reebok</h2></a>
+        </div>
+    </section>
+
+    <section class="quote-form-section">
+        <h2>Solicita una Cotización</h2>
+        <form id="quoteForm">
+            <div id="form-fields">
+                <div class="form-field">
+                    <input type="text" name="productLink[]" placeholder="Pega el link del producto aquí" required>
+                    <button type="button" class="removeFieldBtn">Eliminar</button>
+                </div>
+            </div>
+            <button type="button" id="addFieldBtn">Agregar producto</button>
+            <button type="submit" id="quoteBtn">Cotizar</button>
+        </form>
+    </section>
+
+    <a id="whatsappButton" class="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+    </a>
 <%- include("partials/footer.ejs") %>
