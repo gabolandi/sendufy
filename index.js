@@ -23,7 +23,11 @@ function shoppingCart (req,res, next){
 }
 
 
+
 app.use(shoppingCart);
+
+
+
 
 app.get("/", (req, res) => {
     res.render("index.ejs");
@@ -53,4 +57,5 @@ app.get("/about", (req, res) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
+  
   

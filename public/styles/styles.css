@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background-color: #FF7F50; /* Coral */
+  background-color: #3FA2F6; /* Coral */
   color: white;
   padding: 10px 20px;
   display: flex;
@@ -44,11 +44,12 @@ header {
 }
 
 .navbar a:hover {
-  background-color: #FF4C4C; /* Darker Coral */
+  background-color: #FAFFAF; /* Darker Coral */
+  color: gray;
 }
 
 .navbar .nav-btn {
-  background-color: #FF7F50; /* Coral */
+  background-color: #0F67B1; /* Coral */
   border: none;
   color: white;
   padding: 8px 15px;
@@ -106,7 +107,7 @@ header {
 }
 
 .brand-card button {
-  background-color: #FF7F50; /* Coral */
+  background-color: #0F67B1; /* Coral */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -161,7 +162,7 @@ header {
 }
 
 .removeFieldBtn {
-  background-color: #FF9A8B; /* Light Coral */
+  background-color: #0F67B1; /* Light Coral */
   border: none;
   color: white;
   padding: 5px 10px;
@@ -175,7 +176,7 @@ header {
 }
 
 button {
-  background-color: #FF7F50; /* Coral */
+  background-color: #0F67B1; /* Coral */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -193,11 +194,11 @@ button:hover {
 }
 
 #addFieldBtn {
-  background-color: #FF9A8B; /* Light Coral */
+  background-color: #0F67B1; /* Light Coral */
 }
 
 footer {
-  background-color: #FF7F50; /* Coral */
+  background-color: #3FA2F6; /* Coral */
   color: white;
   padding: 20px;
   text-align: center;
